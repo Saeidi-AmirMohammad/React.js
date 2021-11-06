@@ -2,25 +2,12 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+import Card from './Card';
 import reportWebVitals from './reportWebVitals';
 
-window.element = (
-  <div>
-  <h1>SaeidiAmirMohammad</h1>
-  <p>loremloremloremloremloremloremloremloremloremloremlorem</p>
+ReactDOM.render(<App/>, document.getElementById('root'));
+// ReactDOM.render(<Card/> , document.getElementById('root'));
 
-  </div>
-)
-
-window.element = React.createElement('text' , {className : 'style'} , 'SaeidiAmirMohammad_h2');
-// window.element2 = React.createElement('password' , {className : 'style'} , 'SaeidiAmirMohammad_h2');
-
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
