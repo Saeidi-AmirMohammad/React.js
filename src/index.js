@@ -4,6 +4,17 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+window.element = (
+  <div>
+  <h1>SaeidiAmirMohammad</h1>
+  <p>loremloremloremloremloremloremloremloremloremloremlorem</p>
+
+  </div>
+)
+
+window.element = React.createElement('text' , {className : 'style'} , 'SaeidiAmirMohammad_h2');
+// window.element2 = React.createElement('password' , {className : 'style'} , 'SaeidiAmirMohammad_h2');
+
 ReactDOM.render(
   <React.StrictMode>
     <App />
