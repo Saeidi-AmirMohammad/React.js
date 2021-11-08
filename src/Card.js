@@ -18,11 +18,17 @@ import React from "react";
 
 
 class Card extends React.Component {
+
+    eventHandler(e){
+        console.log('Hello'+e)
+    }
+
 render(){
     return(
                 <div className="card">
                     <header className="card-header">
                         <h2>{this.props.headTitle}</h2>
+                        <button onClick={this.eventHandler.bind(this , 'Amir')}>Click</button>
                     </header>
                     <section className="card-body">
                         <p>{this.props.body}</p>
