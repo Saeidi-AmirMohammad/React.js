@@ -9,42 +9,47 @@ function App() {
     articles: [
       { id: 4, title: "article", text: "welcome To ReactApp_1", footer: "footerText_1" },
       { id: 5, title: "article", text: "welcome To ReactApp_2", footer: "footerText_2" },
-      { id: 6, title: "article", text: "welcome To ReactApp_3", footer: "footerText_3" }
+      { id: 6, title: "article", text: "welcome To ReactApp_3", footer: "footerText_3" },
+      { id: 6, title: "article", text: "welcome To ReactApp_4", footer: "footerText_4" },
+      { id: 6, title: "article", text: "welcome To ReactApp_5", footer: "footerText_5" },
+      { id: 6, title: "article", text: "welcome To ReactApp_6", footer: "footerText_6" }
     ]
   })
-
-  setTimeout(() => {
-    setArticlesState({
-      articles: [
-        { id: 4, title: "article", text: "welcome To ReactApp_4", footer: "footerText_4" },
-        { id: 5, title: "article", text: "welcome To ReactApp_5", footer: "footerText_5" },
-        { id: 6, title: "article", text: "welcome To ReactApp_6", footer: "footerText_6" }
-      ]
-    })
-  }, 2000);
-
-
-  const [stateProducts, setProductsState] = useState({
-    Products: [
-      { productNumber: 1, productName: 'x4' }
-    ]
-  })
-
-  setTimeout(() => {
-    setProductsState({
-      Products: [
-        { productNumber: 2, productName: 'x5' }
-      ]
-    })
-  }, 2000);
 
   return (
     <div className="app">
-      <Card headTitle={stateArticles.articles[0].title} body={stateArticles.articles[0].text} footerText={stateArticles.articles[0].footer} />
-      <Card headTitle={stateArticles.articles[1].title} body={stateArticles.articles[1].text} footerText={stateArticles.articles[1].footer} />
-      <Card headTitle={stateProducts.Products[0].productNumber} body={stateProducts.Products[0].productName} />
-  </div>
+      {
+        stateArticles.articles.map(article => <Card headTitle={article.title} body={article.text} footerText={article.footer} />)
+      }
+    </div>
   )
+
+  // setTimeout(() => {
+  //   setArticlesState({
+  //     articles: [
+  //       { id: 4, title: "article", text: "welcome To ReactApp_4", footer: "footerText_4" },
+  //       { id: 5, title: "article", text: "welcome To ReactApp_5", footer: "footerText_5" },
+  //       { id: 6, title: "article", text: "welcome To ReactApp_6", footer: "footerText_6" }
+  //     ]
+  //   })
+  // }, 2000);
+
+
+  // const [stateProducts, setProductsState] = useState({
+  //   Products: [
+  //     { productNumber: 1, productName: 'x4' }
+  //   ]
+  // })
+
+  // setTimeout(() => {
+  //   setProductsState({
+  //     Products: [
+  //       { productNumber: 2, productName: 'x5' }
+  //     ]
+  //   })
+  // }, 2000);
+
+
 }
 
 
